@@ -149,11 +149,11 @@ class SpeedView @JvmOverloads constructor(
         canvas.restore()
         canvas.save()
 
-//отрисовка стрелки
+//отрисовка поворота и начальной позиции
         canvas.translate((width / 2).toFloat(), height.toFloat())
         canvas.scale(.5f * width, -1f * height)
         canvas.rotate(90 - 180.toFloat() * (value / maxValue.toFloat()))
-
+//отрисовка стрелки
         paint.color = -0x7767
         paint.strokeWidth = 0.02f
         canvas.drawLine(0.01f, 0F, 0F, 1f, paint)
